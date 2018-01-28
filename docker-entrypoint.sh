@@ -13,6 +13,7 @@ function issue_cert () {
       -d $1 \
       -w /html-root \
       --reloadcmd "cat $CERTS_PATH/$1/$1.cer $CERTS_PATH/$1/ca.cer $CERTS_PATH/$1/$1.key > $HAPROXY_PATH/certs/$1.pem"
+      --debug
   fi
 }
 
